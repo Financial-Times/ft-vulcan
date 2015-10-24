@@ -9,7 +9,7 @@ RUN apk --update add go git \
   && ln -s ${PWD} $GOPATH/src/${REPO_PATH} \
   && cd $GOPATH/src/${REPO_PATH} \
   && go get github.com/mailgun/vulcand \
-  && go get github.com/mailgun/vulcand-auth/auth \
+  && go get github.com/Zapadlo/vulcan-session-auth/sauth \
   && go get github.com/mailgun/vulcand/vbundle \
   && go get github.com/mailgun/log \
   && vbundle init --middleware=github.com/Zapadlo/vulcan-session-auth/sauth \
