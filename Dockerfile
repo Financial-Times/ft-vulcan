@@ -12,7 +12,7 @@ RUN apk --update add go git \
   && go get github.com/mailgun/vulcand-auth/auth \
   && go get github.com/mailgun/vulcand/vbundle \
   && go get github.com/mailgun/log \
-  && vbundle init --middleware=github.com/mailgun/vulcand-auth/auth \
+  && vbundle init --middleware=github.com/Zapadlo/vulcan-session-auth/sauth \
   && go build -o vulcand \
   && apk del go git \
   && rm -rf /var/cache/apk/*
