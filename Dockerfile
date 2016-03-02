@@ -12,9 +12,6 @@ RUN apk --update add go git \
   && cd $GOPATH/src/github.com/mailgun/vulcand \
   && git checkout 791285c97cbf28f8eac1ef7222e103990c2d0b08 \
   && go get github.com/Financial-Times/vulcan-session-auth/sauth \
-  # checkout the branch with multiple auth keys \
-  && cd $GOPATH/src/github.com/Financial-Times/vulcan-session-auth/sauth \
-  && git checkout multiple-auth-keys \
   && go get github.com/mailgun/vulcand/vbundle \
   && go get github.com/mailgun/log \
   && cd $GOPATH/src/${REPO_PATH} \
