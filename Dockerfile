@@ -7,6 +7,6 @@ RUN apk --update add go git \
   && git checkout b463e95177f44858713e1da78d47cd0e32c5d6cb \
   && go build -o /vulcand \
   && apk del go git \
-  && rm -rf /var/cache/apk/*
+  && rm -rf /var/cache/apk/* /gopath
 
 CMD /vulcand
