@@ -1,5 +1,6 @@
-#FT-vulcan
+# FT-vulcan
 
-Version of vulcan that comes bundled with plugins:
+Docker image vulcan that is based on [FT fork][1]
 
- - https://github.com/Financial-Times/vulcan-session-auth
+[1]: https://github.com/Financial-Times/vulcand
+
