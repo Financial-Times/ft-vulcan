@@ -9,4 +9,4 @@ RUN apk --update add go git \
   && apk del go git \
   && rm -rf /var/cache/apk/* /gopath
 
-CMD /vulcand
+CMD ["/vulcand"]
