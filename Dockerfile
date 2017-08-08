@@ -1,12 +1,12 @@
-FROM alpine
+FROM alpine:3.6
 
-RUN apk --update add go git \
+RUN apk --update add go git libc-dev \
   && export GOPATH=/gopath \
   && go get github.com/Financial-Times/vulcand \
   && cd $GOPATH/src/github.com/Financial-Times/vulcand \
   && git checkout b463e95177f44858713e1da78d47cd0e32c5d6cb \
   && go build -o /vulcand \
-  && apk del go git \
+  && apk del go git libc-dev \
   && rm -rf /var/cache/apk/* /gopath
 
 CMD ["/vulcand"]
